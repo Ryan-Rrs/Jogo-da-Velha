@@ -46,12 +46,21 @@ function clickedBox(element){
     }
     selectWinner();
     element.style.pointerEvents = "none";
-    let randomDelayTime = ((Math.random() * 1000) + 200).toFixed();
     
-    setTimeout(()=>{
-        bot(runBot);
-    },randomDelayTime);
+    switchTurn();
+    
 }
+
+function switchTurn() {
+    if (players.classList.contains("player")) {
+        players.classList.remove("player");
+        players.classList.add("active");
+    } else {
+        players.classList.add("player");
+        players.classList.remove("active");
+    }
+}
+
 
 function bot(runBot){
         if(runBot){

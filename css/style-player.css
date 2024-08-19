@@ -10,14 +10,14 @@ body{
     background: #56baed;
 }
 
-.select-box, .play-board , .result-box, .mode{
+.select-box, .play-board , .result-box{
     position:absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     transition: all 0.3s ease;
 }
-.select-box, .mode{
+.select-box{
     
     background: #fff;
     padding: 20px 25px 25px;
@@ -26,21 +26,7 @@ body{
     width: 100%;
 }
 
-.select-box{
-    display: none;
-}
-
-.mode{
-    z-index: 6;
-}
-
 .select-box.hide{
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(-50%,-50%) scale(0.9);
-}
-
-.mode.hide{
     opacity: 0;
     pointer-events: none;
     transform: translate(-50%,-50%) scale(0.9);
@@ -53,13 +39,13 @@ body{
     border-bottom: 1px solid #ccc;
 }
 
-.select-box .title, .mode .title-mode{
+.select-box .title{
     font-size: 18px;
     font-weight: 500;
     margin: 20px 0;
 }
 
-.select-box .option, .mode .mode-selection{
+.select-box .option{
     display: flex;
     width: 100%;
 }
